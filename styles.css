@@ -1,0 +1,77 @@
+/* your original CSS — paste it here and append the small additions below */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root {
+  --light-bg: #ffe6f0;
+  --dark-bg: #2b2b2b;
+  --light-text: #333;
+  --dark-text: #fff;
+  --accent: #ff4d79;
+  --strawberry-bg: url('https://i.imgur.com/dFobpfr.png');
+}
+
+body {
+  font-family: 'Patrick Hand', cursive;
+  background-color: #ffe6f0; /* soft baby pink */
+  background-image: linear-gradient(135deg, #ffd6e8 0%, #fff0f6 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--light-text);
+  text-align: center;
+  transition: all 0.25s;
+  margin: 0;
+  padding: 24px;
+}
+
+
+.container {
+  max-width: 420px;
+  margin: 24px auto;
+  padding: 18px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.15);
+  border: 3px dashed var(--accent);
+  position: relative;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffb6c1;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+h1 { margin:0; font-size:24px; color:white; }
+
+#theme-toggle { background:none; border:none; font-size:20px; cursor:pointer; color:white; }
+
+.input-section{ display:flex; gap:8px; margin-top:12px; }
+.input-section input{ flex:1; padding:10px; border:2px solid var(--accent); border-radius:8px; background:#fff0f6; }
+.input-section button{ background:var(--accent); color:#fff; border:none; padding:10px; border-radius:8px; cursor:pointer; }
+
+.todo-controls{ display:flex; gap:8px; margin-top:10px; justify-content:center; flex-wrap:wrap; }
+.todo-controls button{ padding:6px 8px; border-radius:8px; border:1px solid rgba(0,0,0,0.06); background:#fff; cursor:pointer; }
+
+ul{ list-style:none; padding:0; margin-top:12px; max-height:320px; overflow:auto; }
+li{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px; margin:6px 0; border-radius:8px; background:#fff; border-left:5px solid var(--accent); position:relative;
+}
+li .task-text{ flex:1; text-align:left; padding-right:8px; word-break:break-word; }
+li .task-actions{ display:flex; gap:8px; align-items:center; }
+button.icon{ background:transparent; border:none; cursor:pointer; font-size:16px; }
+
+.completed{ text-decoration:line-through; opacity:0.6; }
+
+.notes{ margin-top:18px; background:#fff0f6; padding:12px; border-radius:12px; }
+.notes textarea{ width:100%; height:120px; padding:10px; border-radius:8px; border:2px solid var(--accent); resize:vertical; }
+
+footer{ margin-top:12px; color:var(--accent); }
+
+/* Dark Mode */
+.dark-mode{ background-color:var(--dark-bg); color:var(--dark-text); }
+.dark-mode .container{ background:#444; }
+.dark-mode input, .dark-mode button{ border-color:#ff6699; color:var(--dark-text); }
